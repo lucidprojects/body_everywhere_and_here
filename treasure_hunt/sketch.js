@@ -2,6 +2,7 @@
 
 let myVideo;
 let threshSlider;
+let threshVal;
 let bgButton;
 let bgPixels = [];
 
@@ -30,6 +31,8 @@ let pastPixels = [];
 let fadeToMap = false;
 
 let topLog = true;
+
+let finish;
 
 let ship, anchor, flag, shipwheel, treasure, transImage;
 let shipObj, anchorObj, flagObj, shipwheelObj, treasureObj;
@@ -72,6 +75,7 @@ function setup() {
   shipwheelObj = new FadeImage(shipwheel, 400, 140, 100, 100, fade, fadeAmount);
   treasureObj = new FadeImage(treasure, 490, 210, 150, 150, fade, fadeAmount);
 
+  threshVal = threshSlider.value();
 }
 
 function setBG() {
@@ -112,7 +116,7 @@ function draw() {
 
   const currentPixels = myVideo.pixels;
 
-  let treshVal = threshSlider.value();
+  // let threshVal = threshSlider.value();
 
   // checks top left section for movement and completes route if motion is found
   for (let y = 0; y < 150; y++) {
@@ -125,7 +129,7 @@ function draw() {
 
       avgtpDiff = (rtpDiff + gtpDiff + btpDiff / 3); // value 0 to 255;
 
-      // if (avgtpDiff > treshVal) {
+      // if (avgtpDiff > threshVal) {
       if (avgtpDiff > 200) {
         if (topLog == true) console.log("avgtpDiff = " + avgtpDiff);
         if (millis() >= 800 + prevTime) {
@@ -150,7 +154,7 @@ function draw() {
       avgDiff = (rDiff + gDiff + bDiff / 3); // value 0 to 255;
 
       /////////// find the map and route ////////////
-      if (avgDiff < treshVal) {
+      if (avgDiff < threshVal) {
         // turn the pixel black
         currentPixels[i + 0] = 0;
         currentPixels[i + 1] = 0;
@@ -197,31 +201,30 @@ function draw() {
 
   if (routeBlocks.length >= 44) {
     treasureObj.display();
-    filter(INVERT);
     topLog = false;
-    fadeToMap == true;
-    // treshVal--; 
-    //trying to fade out video and only show the map
-    myVideo = transImage;
-    image(myVideo, 0, 0, width, height);
-    for (let y = 0; y < height; y++) {
-      for (let x = 0; x < width; x++) {
+    fadeToMap = true;
+    
+  }
 
-        const i = (y * width + x) * 4;
+  //fadeout to only show the map 
+  if (frameCount % 2 == 0 && threshVal > 0 && fadeToMap == true){
+  // if (threshVal > 0 && fadeToMap == true){ // fades out quicker
+    threshVal --;
+    console.log(threshVal);
+    finish = true;
 
-        currentPixels[i + 0] = 0;
-        currentPixels[i + 1] = 0;
-        currentPixels[i + 2] = 0;
-        currentPixels[i + 3] = 100;
-        // console.log("do I even get here?");
-      }
+  }
+
+  //invert back to original map colors
+    if (threshVal == 0) {
+      filter(INVERT);
     }
 
-  }
 
-  if (fadeToMap == true) {
-    treshVal--;
-    console.log(treshVal);
+  if (threshVal == 0 && finish == true) {
+    flag.filter(INVERT);
+    shipwheel.filter(INVERT);
+    treasure.filter(INVERT);
+    finish = false;
   }
-
 }

@@ -15,7 +15,7 @@ class FadeImage {
         tint(255, this.fade);
         //tint(255, 200);
         filter(INVERT);
-        if (this.fade = 0) fthis.adeAmount = 1;
+        if (this.fade == 0) this.fadeAmount = 1;
         this.fade += this.fadeAmount;
         pop();
     }
