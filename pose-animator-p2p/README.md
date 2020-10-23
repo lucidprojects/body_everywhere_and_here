@@ -21,7 +21,7 @@ Expose local signal server with [ngrok](https://ngrok.com)
 ```./ngrok http 80```
 
 ### For remote client:
-In index.js modify the initWebRTCPeer() func and update initSocketClient with ngrok address.
+In index.js modify the initWebRTCPeer() func and update initSocketClient with the ngrok address.
 
 Update import call to from webrtc_peer_client import to "./utils/webrtc_peer_client_no_turn.js";
 
