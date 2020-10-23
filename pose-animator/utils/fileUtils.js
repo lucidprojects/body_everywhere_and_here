@@ -16,12 +16,37 @@
  */
 
 export class FileUtils {
-    static setDragDropHandler(handler) {
-        window.addEventListener("dragover", function (e) {
+    // static setDragDropHandler(handler) {
+    //     window.addEventListener("dragover", function (e) {
+    //         e = e || event;
+    //         e.preventDefault();
+    //       }, false);
+    //       window.addEventListener("drop", function (e) {
+    //         e = e || event;
+    //         e.preventDefault();
+    //         if (e.dataTransfer.items) {
+    //           let files = e.dataTransfer.items;
+    //           if (files.length < 1) {
+    //             return;
+    //           }
+    //           let reader = new FileReader();
+    //           reader.onload = (event) => {
+    //             handler(event.target.result);
+    //           }
+    //           reader.readAsText(e.dataTransfer.files[0]);
+    //         }
+    //       }, false);
+    // }
+    static setDragDropHandlerLocal(handler) {
+      let outputWindow = document.getElementById('keypoints');
+        // window.addEventListener("dragover", function (e) {
+          outputWindow.addEventListener("dragover", function (e) {
             e = e || event;
             e.preventDefault();
+            console.log("drag over local");
           }, false);
-          window.addEventListener("drop", function (e) {
+        // });
+          outputWindow.addEventListener("drop", function (e) {
             e = e || event;
             e.preventDefault();
             if (e.dataTransfer.items) {
@@ -37,4 +62,58 @@ export class FileUtils {
             }
           }, false);
     }
+
+    static setDragDropHandlerPeers(handler) {
+        let peerWindow = document.getElementById('keypointsPeer');
+        peerWindow.addEventListener("dragover", function (e) {
+        // window.addEventListener("dragover", function (e) {
+            e = e || event;
+            e.preventDefault();
+            console.log("drag over peer");
+          }, false);
+          peerWindow.addEventListener("drop", function (e) {
+            e = e || event;
+            e.preventDefault();
+            if (e.dataTransfer.items) {
+              let files = e.dataTransfer.items;
+              if (files.length < 1) {
+                return;
+              }
+              let reader = new FileReader();
+              reader.onload = (event) => {
+                handler(event.target.result);
+              }
+              reader.readAsText(e.dataTransfer.files[0]);
+            }
+          }, false);
+    }
+
+
+
 }
+
+
+// export class FileUtilsPeers {
+//     static setDragDropHandlerPeers(handler,peer) {
+//         let peerWindow = document.getElementById('outputPeer');
+//         peerWindow.addEventListener("dragover", function (e) {
+//             e = e || event;
+//             e.preventDefault();
+//           }, false);
+//           peerWindow.addEventListener("drop", function (e) {
+//             e = e || event;
+//             e.preventDefault();
+//             if (e.dataTransfer.items) {
+//               let files = e.dataTransfer.items;
+//               if (files.length < 1) {
+//                 return;
+//               }
+//               let reader = new FileReader();
+//               reader.onload = (event) => {
+//                 handler(event.target.result);
+//               }
+//               reader.readAsText(e.dataTransfer.files[0]);
+//             }
+//           }, false);
+//     }
+// }

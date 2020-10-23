@@ -1,5 +1,9 @@
 # Pose Animator Peer to Peer
-Adaptation of [Pose Animator](https://github.com/yemount/pose-animator) modified to allow for peer 2 peer connection via simplepeer.js.
+Adaptation of the [Pose Animator](https://github.com/yemount/pose-animator) library modified to allow for peer 2 peer connection via simplepeer.js.
+
+<img src="/resources/images/pose_animator_hdr.gif" style="width:100%;"/>
+
+
 
 ## How To:
 ### For local client:

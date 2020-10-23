@@ -25,6 +25,7 @@ export class SVGUtils {
         return new Promise((resolve, reject) => {
             svgScope.project.importSVG(file, () => {
                 console.log('** SVG imported **');
+                //console.log(file);  //shows whole svg contents - I need the name.
                 resolve(svgScope);
             }, (e) => {
                 console.log('** SVG improt error: ', e);
