@@ -19,7 +19,6 @@ import * as posenet_module from "@tensorflow-models/posenet";
 import * as facemesh_module from "@tensorflow-models/facemesh";
 import * as tf from "@tensorflow/tfjs";
 import * as paper from "paper";
-import dat from "dat.gui";
 import Stats from "stats.js";
 import "babel-polyfill";
 
@@ -349,6 +348,8 @@ function detectPoseInRealTime(video, peer) {
             // } else {}
 
             faceDetectionPeer = peerFace;
+            
+            drawPoseSkeletons(keypointCtxPeer, posesPeer, faceDetectionPeer, "pink", "orange");
 
         }
 
@@ -369,7 +370,7 @@ function detectPoseInRealTime(video, peer) {
             } else {
                 // console.log("peerNose X is not the same " + peerNoseX + " pior Nose = " + priorPeerNoseX);
                 peerSameCounter = 0;
-                drawPoseSkeletons(keypointCtxPeer, posesPeer, faceDetectionPeer, "pink", "orange");
+                // drawPoseSkeletons(keypointCtxPeer, posesPeer, faceDetectionPeer, "pink", "orange");
             }
             priorPeerNoseX = peerNoseX;
 

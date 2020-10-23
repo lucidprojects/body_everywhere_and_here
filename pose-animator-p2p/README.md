@@ -28,7 +28,7 @@ In separate terminal navigate to pose-animator-p2p directory
 
 ```yarn run```
 
-For local client navigate to in browser.
+For local client navigate to localhost in browser.
 
 ```localhost:1234``` (unless port is already in use)
 
