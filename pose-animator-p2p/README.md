@@ -13,10 +13,10 @@ In separate terminal navigate run yarn run watch from pose-animator directory
 
 Navigate to 
 
-```localhost:1234``` (unless port is in use)
+```localhost:1234``` (unless port is already in use)
 
 
-Expose local signal server with [ngrok](https://ngrok.com){:target="_blank"}
+Expose local signal server with [ngrok](https://ngrok.com)
 
 ```./ngrok http 80```
 
