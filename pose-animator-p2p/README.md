@@ -3,7 +3,7 @@ Adaptation of [Pose Animator](https://github.com/yemount/pose-animator) modified
 
 ## How To:
 ### For local client:
-Run local Signal express-server from the command line from https://github.com/lisajamhoury/WebRTC-Simple-Peer-Examples
+Run local signal express-server from the command line from https://github.com/lisajamhoury/WebRTC-Simple-Peer-Examples
 
 ```npm run watch```
 
