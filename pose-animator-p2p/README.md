@@ -9,11 +9,11 @@ Navigate to /express_server/ and run
 
 ```npm run watch```
 
-In separate terminal navigate run yarn run watch from pose-animator directory
+In separate terminal navigate to pose-animator-peer-master directory
 
-```yarn run```
+```yarn run watch```
 
-Navigate to 
+For local client navigate to in browser.
 
 ```localhost:1234``` (unless port is already in use)
 
