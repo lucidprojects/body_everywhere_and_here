@@ -3,13 +3,21 @@ Adaptation of [Pose Animator](https://github.com/yemount/pose-animator) modified
 
 ## How To:
 ### For local client:
-Run local signal express-server from the command line from https://github.com/lisajamhoury/WebRTC-Simple-Peer-Examples
 
-Navigate to /express_server/ and run
+Clone [WebRTC-Simple-Peer-Examples](https://github.com/lisajamhoury/WebRTC-Simple-Peer-Examples) repo
+
+```git clone https://github.com/lisajamhoury/WebRTC-Simple-Peer-Examples.git```
+
+Copy pose-animator-p2p dir to /WebRTC-Simple-Peer-Examples/broswer_client/examples/
+
+Run local signal express-server from the command line from /WebRTC-Simple-Peer-Examples/express_server/ 
 
 ```npm run watch```
 
-In separate terminal navigate to pose-animator-peer-master directory
+### TODO
+- [ ] Copy WebRTC-Simple-Peer-Examples to simplified repo
+
+In separate terminal navigate to pose-animator-p2p directory
 
 ```yarn run```
 
