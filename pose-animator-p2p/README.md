@@ -12,11 +12,15 @@ Copy pose-animator-p2p dir to /WebRTC-Simple-Peer-Examples/broswer_client/exampl
 
 Run local signal express-server from the command line from /WebRTC-Simple-Peer-Examples/express_server/ 
 
+```npm install```
+
 ```npm run watch```
 
 #### TODO - [ ] Copy WebRTC-Simple-Peer-Examples to simplified repo
 
 In separate terminal navigate to pose-animator-p2p directory
+
+```yarn install```
 
 ```yarn run```
 
