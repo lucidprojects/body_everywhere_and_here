@@ -11,7 +11,7 @@ Navigate to /express_server/ and run
 
 In separate terminal navigate to pose-animator-peer-master directory
 
-```yarn run watch```
+```yarn run```
 
 For local client navigate to in browser.
 
