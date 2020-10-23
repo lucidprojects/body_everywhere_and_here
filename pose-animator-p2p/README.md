@@ -14,8 +14,7 @@ Run local signal express-server from the command line from /WebRTC-Simple-Peer-E
 
 ```npm run watch```
 
-### TODO
-- [ ] Copy WebRTC-Simple-Peer-Examples to simplified repo
+#### TODO - [ ] Copy WebRTC-Simple-Peer-Examples to simplified repo
 
 In separate terminal navigate to pose-animator-p2p directory
 
