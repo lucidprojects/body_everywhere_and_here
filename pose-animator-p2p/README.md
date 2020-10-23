@@ -1,16 +1,20 @@
 # Pose Animator Peer to Peer
-Adaptation of [Pose Animator](https://github.com/yemount/pose-animator){:target="_blank"} modified to allow for peer 2 peer connection via simplepeer.js.
+Adaptation of [Pose Animator](https://github.com/yemount/pose-animator) modified to allow for peer 2 peer connection via simplepeer.js.
 
 ## How To:
 ### For local client:
 Run local Signal express-server from the command line from https://github.com/lisajamhoury/WebRTC-Simple-Peer-Examples
+
 (No need to open localhost:3000)
+
 ```npm run watch```
 
 In separate terminal navigate run yarn run watch from pose-animator directory
+
 ```yarn run```
 
 Expose local signal server with [ngrok](https://ngrok.com){:target="_blank"}
+
 ```./ngrok http 80```
 
 ### For remote client:
@@ -19,9 +23,11 @@ In index.js modify the initWebRTCPeer() func and update initSocketClient with ng
 Update import call to from webrtc_peer_client import to "./utils/webrtc_peer_client_no_turn.js";
 
 Run Yarn build locally or remote to build out remote peer client files.   
+
 ```yarn build```
 
 If ran locally, ftp files to remote server or glitch.  If on remote server run remote express server with 
+
 ```node app.js```
 
 
