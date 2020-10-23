@@ -33,6 +33,10 @@ If ran locally, ftp files to remote server or glitch.  If on remote server run r
 
 ```node app.js```
 
+Navigate to your secure domain
+
+```https://securedomain.com```
+
 
 # From Pose Animator README
 ## Platform support
@@ -43,7 +47,7 @@ It should also run on Chrome on Android and potentially more Android mobile brow
 
 # Animate your own design
 
-1. Download the [sample skeleton SVG here](/resources/samples/skeleton.svg).
+1. Download the [sample skeleton SVG here](https://github.com/yemount/pose-animator/blob/master/resources/samples/skeleton.svg).
 1. Create a new file in your vector graphics editor of choice. Copy the group named ‘skeleton’ from the above file into your working file. Note: 
 	* Do not add, remove or rename the joints (circles) in this group. Pose Animator relies on these named paths to read the skeleton’s initial position. Missing joints will cause errors.
 	* However you can move the joints around to embed them into your illustration. See step 4.
@@ -61,4 +65,4 @@ It should also run on Chrome on Android and potentially more Android mobile brow
 	```
 1. Embed the sample skeleton in ‘skeleton’ group into your illustration by moving the joints around.
 1. Export the file as an SVG file.
-1. Open [Pose Animator camera demo](https://pose-animator-demo.firebaseapp.com/camera.html). Once everything loads, drop your SVG file into the browser tab. You should be able to see it come to life :D
+1. Open [Pose Animator p2p](https://github.com/lucidprojects/body_everywhere_and_here/tree/master/pose-animator-p2p/index.html). Once everything loads, drop your custom SVG into either the local or peer posenet windows. You should be able to see it come to life :D
