@@ -5,13 +5,16 @@ Adaptation of [Pose Animator](https://github.com/yemount/pose-animator) modified
 ### For local client:
 Run local Signal express-server from the command line from https://github.com/lisajamhoury/WebRTC-Simple-Peer-Examples
 
-(No need to open localhost:3000)
-
 ```npm run watch```
 
 In separate terminal navigate run yarn run watch from pose-animator directory
 
 ```yarn run```
+
+Navigate to 
+
+```localhost:1234``` (unless port is in use)
+
 
 Expose local signal server with [ngrok](https://ngrok.com){:target="_blank"}
 
